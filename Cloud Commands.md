@@ -6,10 +6,9 @@ git init
 git add .
 git commit -m "heroku"
 heroku login
-heroku buildpacks:set jincod/dotnetcore
 heroku create dtweetapi
-heroku buildpacks:set jincod/dotnetcore
 heroku git:remote dtweetapi
+heroku buildpacks:set jincod/dotnetcore
 git push heroku main
 
 # Github Push
@@ -20,6 +19,9 @@ git init
 git add .
 git commit -m "first commit"
 git push origin master
+
+settings -> add build Package
+https://github.com/hkarthikraj01/dotnetcore-buildpack.git
 
 # Docker Image to DockerHub
 --cmd--
